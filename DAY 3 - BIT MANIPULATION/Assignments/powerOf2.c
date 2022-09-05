@@ -3,7 +3,7 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    printf((n&(n-1)==0 || n==0)?"False":"True");
+    printf((n&(n-1)!=0 || n==0)?"False":"True");
 
     return 0;
 }
