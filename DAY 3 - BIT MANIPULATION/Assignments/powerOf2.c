@@ -20,7 +20,7 @@ int main()
 //     }
 //     else
 //     {
-//         printf(floor(d)==ceil(d)?"TRUE":"false");
+//         printf(floor(d)==ceil(d)?"TRUE": "false");
 //     }
     
 //     return 0;
