@@ -1,0 +1,52 @@
+Pascal's Triangle :
+    1
+   1 1 
+  1 2 1 
+ 1 3 3 1 
+1 4 6 4 1 
+
+Method 1:
+nCr = n!/(n-r)!r!
+
+Method 2:
+TC ->O(N^2)
+for(0 to n)
+  for(0 to i)
+    j==0 or i==j ->pascals[i][j]=1;
+    else -> pascals[i][j]=pascals[i-1][j]+pascals[i-1][j-1]
+    
+-------------------------------
+Distributed Property:
+1)(a+b)%c = [(a%c)+(b%c)]%c
+2)(a-b)%c = [(a%c)-(b%c)]%c
+3)(a*b)%c = [(a%c)*(b%c)]%c
+4)(a/b)%c = [(a%c)/(b%c)]%c (NOT POSSIBLE)
+
+--------------------------------
+Euclidean Algorithm:
+TC -> O(log min(a,b))
+gcd(int a,int b){
+  a==0 return b;
+return gcd(b%a,a);
+}
+
+----------------------------------
+A power b(a^b):
+  Binary partition : 
+  TC -> O(log b)
+  example:
+  2^7 = 2^3 * 2^3 * 2^1
+         |
+        2^1 * 2^1 * 2^1
+        
+---------------------------------
+Catalan Numbers:
+Cn = 2n C n / (n+1) = (2n!)/(n+1)!n!
+1)Count no of Possible BSTs with given Inorder Traversal
+2)
+  
+  
+  
+  
+  
+  
