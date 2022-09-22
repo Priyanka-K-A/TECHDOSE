@@ -10,7 +10,7 @@ public class Main
 		    arr[i] = sc.nextInt();
 		}
 		int target = sc.nextInt();
-		int ans=0;
+		int ans=-1;
 		int low=0,high=n-1;
 		while(low<=high)
 		{
