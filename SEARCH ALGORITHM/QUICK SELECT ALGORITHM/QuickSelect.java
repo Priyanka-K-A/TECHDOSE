@@ -6,7 +6,7 @@ public class Main{
         arr[low] = arr[high];
         arr[high] = temp;
     }
-    public static void quicksort(int arr[],int low,int high,int k)
+    public static void quickselect(int arr[],int low,int high,int k)
     {
             if(low<high)
             {
@@ -17,11 +17,11 @@ public class Main{
                 }
                 else if(k<=partitionIndex)
                 {
-                    quicksort(arr, low, partitionIndex-1,k);
+                    quickselect(arr, low, partitionIndex-1,k);
                 }
                 else 
                 {
-                    quicksort(arr,partitionIndex+1, high ,k);
+                    quickselect(arr,partitionIndex+1, high ,k);
                 }
             }
     }
@@ -51,7 +51,7 @@ public class Main{
         }
         int k = sc.nextInt();
         int low=0,high = n-1;
-        quicksort(arr,low,high,k);
+        quickselect(arr,low,high,k);
         for(int i=0;i<n;i++)
         {
             System.out.print(arr[i]+"  ");
