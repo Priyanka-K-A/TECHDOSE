@@ -1,4 +1,5 @@
-class Solution {
+
+//2427. Number of Common Factorsclass Solution {
     public int commonFactors(int a, int b) {
         int count=0;
         int min = 0;
