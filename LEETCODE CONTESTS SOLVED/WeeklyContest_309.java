@@ -1,3 +1,4 @@
+//2399. Check Distances Between Same Letters
 class Solution {
     public boolean checkDistances(String s, int[] distance) {
         int k=0,s1=0;
