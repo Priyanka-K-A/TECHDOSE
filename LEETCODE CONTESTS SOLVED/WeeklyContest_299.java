@@ -1,3 +1,4 @@
+//2319. Check if Matrix Is X-Matrix
 class Solution {
     public boolean checkXMatrix(int[][] grid) {
         int row = grid.length;
