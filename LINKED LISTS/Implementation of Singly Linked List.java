@@ -61,6 +61,33 @@ class LinkedList
         }
         System.out.println();
     }
+    void deleteAtBeginning()
+    {
+        if(head!=null)
+            head = head.next;
+    }
+    void deleteAtEnd()
+    {
+        Node temp = head;
+        Node prev = null;
+        while(temp.next!=null)
+        {
+            prev = temp;
+            temp = temp.next;
+        }
+        prev.next=null;
+    }
+    void deleteAtPosition(int loc)
+    {
+        Node temp = head;
+        Node prev = null;
+        while(--loc>0)
+        {
+            prev = temp;
+            temp = temp.next;
+        }
+        prev.next = temp.next;
+    }
 }
 public class Main
 {
@@ -74,6 +101,12 @@ public class Main
 	    ll.insertAtEnd(50);
 	    ll.display();
 	    ll.insertAtPosition(60,3);
+	    ll.display();
+	    ll.deleteAtBeginning();
+	    ll.display();
+	    ll.deleteAtEnd();
+	    ll.display();
+	    ll.deleteAtPosition(3);
 	    ll.display();
 	}
 }
