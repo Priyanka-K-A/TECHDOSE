@@ -41,6 +41,7 @@ class DoublyLinkedList
     {
         Node nn = createNode(data);
         Node temp = head;
+        //After specified Position
         while(--loc>0)
         {
             temp = temp.next;
@@ -49,6 +50,18 @@ class DoublyLinkedList
         nn.prev = temp;
         temp.next = nn;
         nn.next.prev = nn;
+        //At Specific Position
+        // Node prev = null;
+        // while(--loc>0)
+        // {
+        //     prev = temp;
+        //     temp = temp.next;
+        // }
+        // nn.prev = prev;
+        // nn.next = temp;
+        // prev.next = nn;
+        // temp.prev = nn;
+        
     }
     void deleteAtBeginning()
     {
