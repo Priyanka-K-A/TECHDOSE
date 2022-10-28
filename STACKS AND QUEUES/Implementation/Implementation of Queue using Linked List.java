@@ -49,6 +49,10 @@ class QueueUsingLL
         }
         System.out.println();
     }
+    void peek()
+    {
+        System.out.println(front.data);
+    }
 }
 public class Main 
 {
@@ -62,5 +66,7 @@ public class Main
         qll.display();
         qll.deque();
         qll.display();
+        qll.peek();
+        
     }
 }
