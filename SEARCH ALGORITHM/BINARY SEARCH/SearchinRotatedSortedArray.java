@@ -21,27 +21,27 @@ public class Main
 		        break;
 		    }
 		    else if(arr[low]<=arr[mid])
-            {
-                if(target>=arr[low] && target<=arr[mid])
-                {
-                    high = mid-1;
-                }
-                else
-                {
-                    low = mid+1;
-                }
-            }
-            else
-            {
-                if(target>=arr[mid] && target<=arr[high])
-                {
-                    low = mid+1;
-                }
-                else
-                {
-                    high = mid-1;
-                }  
-            }
+		    {
+			if(target>=arr[low] && target<=arr[mid])
+			{
+			    high = mid-1;
+			}
+			else
+			{
+			    low = mid+1;
+			}
+		    }
+		    else
+		    {
+			if(target>=arr[mid] && target<=arr[high])
+			{
+			    low = mid+1;
+			}
+			else
+			{
+			    high = mid-1;
+			}  
+		    }
 		}
 		System.out.println(ans);
 	}
