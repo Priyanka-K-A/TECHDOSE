@@ -11,18 +11,8 @@ public class Main{
             if(low<high)
             {
                 int partitionIndex = partition(arr,low,high);
-                if(partitionIndex+1==k)
-                {
-                  return ;
-                }
-                else if(k<=partitionIndex)
-                {
-                    quickselect(arr, low, partitionIndex-1,k);
-                }
-                else 
-                {
-                    quickselect(arr,partitionIndex+1, high ,k);
-                }
+                quickselect(arr, low, partitionIndex-1,k);
+                quickselect(arr,partitionIndex+1, high ,k);
             }
     }
     public static int partition(int arr[],int low,int high)
@@ -31,7 +21,7 @@ public class Main{
         int i = low-1;
         for(int j=low;j<high;j++)
         {
-            if(arr[j]>pivot)
+            if(arr[j]<pivot)
             {
                 i++;
                 swap(arr,i,j);
@@ -58,4 +48,4 @@ public class Main{
         }
         System.out.println("\n"+arr[k-1]);
     }
-}
+} 
